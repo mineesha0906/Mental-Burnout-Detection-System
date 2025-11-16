@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.38.1/gradio.js"></script>
+    
+    <style>
+        .gradio-container-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        gradio-app {
+            width: 100%;
+            display: block;
+        }
+        
+        .main-title, .description {
+            text-align: center;
+        }
+
+        .back-button-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .back-button {
+            padding: 10px 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #f0f2f5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">
+            Burnout <span class="accent-text">Assessment</span>
+        </h1>
+        <p class="description">
+            Please allow camera and microphone access to begin the assessment.
+        </p>
+
+        <div class="gradio-container-wrapper">
+            <gradio-app 
+    src="https://huggingface.co/spaces/project-exhibition/BurnoutDetection"
+    bordered
+    theme_mode="light"
+    style="min-height: 800px;"
+></gradio-app>
+        </div>
+        
+        <a href="index.html" class="back-button-link">
+            <button class="back-button">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>

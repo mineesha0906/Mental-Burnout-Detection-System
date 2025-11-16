@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('Gemini_Generated_Image_1z6elm1z6elm1z6e.png'); /* A soft, warm background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* In your styles.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; /* Increased from 900px to 1200px */
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* You might also want to add min-height or padding for more vertical space */
+    max-height: 550px; /* Example: Give it a minimum height */
+}
+
+/* For larger screens (desktop view) */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 1200px; /* Ensure this matches for desktop too */
+        padding: 40px; /* Add some internal padding to the container */
+    }
+}
+/* In your styles.css */
+
+.image-section {
+    flex: 1; /* Give the image section even more proportional space */
+    position: relative;
+    padding: 30px; /* Increase padding around the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 95%; /* Make the image take up more of its container */
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transform: scale(1.15); /* Slightly increase the scale for extra size */
+}
+
+/* Adjust the rounded shape size to match the larger image */
+.rounded-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%; /* Increase width */
+    height: 95%; /* Increase height */
+    background-color: #e0e9df;
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.content-section {
+    flex: 1;
+    padding: 30px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.accent-text {
+    color: #a3b899; /* A darker shade of the green */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.call-to-action {
+    background-color: #c9a797; /* A soft peach color */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(201, 167, 151, 0.4);
+}
+
+.call-to-action:hover {
+    background-color: #b79685;
+}
+
+/* Responsive design for a side-by-side layout on larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 1000px;
+    }
+    .image-section {
+        padding: 50px;
+    }
+    .content-section {
+        padding: 50px 40px;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
